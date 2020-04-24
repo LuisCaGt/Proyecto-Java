@@ -20,5 +20,4 @@ descuentoC float not null,
 totalC float not null
 ) ENGINE=INNODB default CHARSET=LATIN1;
 
-)ENGINE=INNODB default CHARSET=LATIN1;
 
