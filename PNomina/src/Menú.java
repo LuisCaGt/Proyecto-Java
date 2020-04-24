@@ -10,6 +10,7 @@
  */
 public class Menú extends javax.swing.JFrame {
   private BajasEmpleados NuevaVentana1;
+  private ModificacionEmpleados NuevaVentana2;
     /**
      * Creates new form Menú
      */
@@ -29,6 +30,7 @@ public class Menú extends javax.swing.JFrame {
         Panel = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
@@ -46,6 +48,14 @@ public class Menú extends javax.swing.JFrame {
         );
 
         jMenu1.setText("Mantenimiento Empleado");
+
+        jMenuItem2.setText("Modifiacion Empleado");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
 
         jMenuItem1.setText("Baja de Empleado");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +91,12 @@ public class Menú extends javax.swing.JFrame {
            NuevaVentana1 = new BajasEmpleados();
         Panel.add(NuevaVentana1);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        NuevaVentana2 = new ModificacionEmpleados();
+        Panel.add(NuevaVentana2);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -123,5 +139,6 @@ public class Menú extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     // End of variables declaration//GEN-END:variables
 }
