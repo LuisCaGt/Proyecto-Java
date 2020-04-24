@@ -9,11 +9,11 @@
  * @author leone
  */
 public class Menú extends javax.swing.JFrame {
-  private BajasEmpleados NuevaVentana1;
 
-  private ModificacionEmpleados NuevaVentana2;
-
-  private AltasEmpleado NuevaVentana2;
+    private AltasEmpleado NuevaVentana1;
+    private BajasEmpleados NuevaVentana2;
+    private ModificacionEmpleados NuevaVentana3;
+    private ChequesEmpleados NuevaVentana4;
 
     /**
      * Creates new form Menú
@@ -34,10 +34,13 @@ public class Menú extends javax.swing.JFrame {
         Panel = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,23 +57,15 @@ public class Menú extends javax.swing.JFrame {
 
         jMenu1.setText("Mantenimiento Empleado");
 
-        jMenuItem2.setText("Modifiacion Empleado");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem2);
-
-        jMenuItem1.setText("Baja de Empleado");
+        jMenuItem1.setText("Altas Empleado");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItem3ActionPerformed(evt);
             }
         });
         jMenu1.add(jMenuItem1);
 
-        jMenuItem2.setText("Altas Empleado");
+        jMenuItem2.setText("Baja de Empleado");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -78,9 +73,38 @@ public class Menú extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem2);
 
+        jMenuItem3.setText("Modifiacion Empleado");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed1(evt);
+            }
+        });
+        jMenu1.add(jMenuItem3);
+
         jMenuBar1.add(jMenu1);
 
+        jMenu3.setText("Procesos");
+
+        jMenuItem4.setText("Cheque Empleado");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem4);
+
+        jMenuBar1.add(jMenu3);
+
         jMenu2.setText("Salir");
+
+        jMenuItem5.setText("Salir");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem5);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -99,23 +123,29 @@ public class Menú extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-           NuevaVentana1 = new BajasEmpleados();
-        Panel.add(NuevaVentana1);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-
-        NuevaVentana2 = new ModificacionEmpleados();
+        NuevaVentana2 = new BajasEmpleados();
         Panel.add(NuevaVentana2);
-
-        NuevaVentana2 = new AltasEmpleado();
-        Panel.add(NuevaVentana2);
-        
-
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        NuevaVentana1 = new AltasEmpleado();
+        Panel.add(NuevaVentana1);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem3ActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed1
+        NuevaVentana3 = new ModificacionEmpleados();
+        Panel.add(NuevaVentana3);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed1
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        NuevaVentana4 = new ChequesEmpleados();
+        Panel.add(NuevaVentana4);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,8 +186,12 @@ public class Menú extends javax.swing.JFrame {
     private javax.swing.JDesktopPane Panel;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     // End of variables declaration//GEN-END:variables
 }
