@@ -10,7 +10,11 @@
  */
 public class Menú extends javax.swing.JFrame {
   private BajasEmpleados NuevaVentana1;
+
   private ModificacionEmpleados NuevaVentana2;
+
+  private AltasEmpleado NuevaVentana2;
+
     /**
      * Creates new form Menú
      */
@@ -32,6 +36,7 @@ public class Menú extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,6 +70,14 @@ public class Menú extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
+        jMenuItem2.setText("Altas Empleado");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Salir");
@@ -94,8 +107,14 @@ public class Menú extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
+
         NuevaVentana2 = new ModificacionEmpleados();
         Panel.add(NuevaVentana2);
+
+        NuevaVentana2 = new AltasEmpleado();
+        Panel.add(NuevaVentana2);
+        
+
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
