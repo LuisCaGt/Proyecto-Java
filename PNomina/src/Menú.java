@@ -10,10 +10,16 @@
  */
 public class Menú extends javax.swing.JFrame {
 
+
     private AltasEmpleado NuevaVentana1;
     private BajasEmpleados NuevaVentana2;
     private ModificacionEmpleados NuevaVentana3;
     private ChequesEmpleados NuevaVentana4;
+
+  private ModificacionEmpleados NuevaVentana3;
+
+  private AltasEmpleado NuevaVentana2;
+
 
     /**
      * Creates new form Menú
@@ -35,9 +41,11 @@ public class Menú extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
@@ -57,6 +65,7 @@ public class Menú extends javax.swing.JFrame {
 
         jMenu1.setText("Mantenimiento Empleado");
 
+
         jMenuItem1.setText("Altas Empleado");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,6 +75,9 @@ public class Menú extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Baja de Empleado");
+
+        jMenuItem2.setText("Altas empleado");
+
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -81,17 +93,25 @@ public class Menú extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem3);
 
+
         jMenuBar1.add(jMenu1);
 
         jMenu3.setText("Procesos");
 
         jMenuItem4.setText("Cheque Empleado");
+
+        jMenuItem4.setText("Modificacion Empleado");
+
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
             }
         });
+
         jMenu3.add(jMenuItem4);
+
+        jMenu1.add(jMenuItem4);
+
 
         jMenuBar1.add(jMenu3);
 
@@ -124,9 +144,15 @@ public class Menú extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+
         NuevaVentana2 = new BajasEmpleados();
         Panel.add(NuevaVentana2);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+        // TODO add your handling code here:
+
+
+
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         NuevaVentana1 = new AltasEmpleado();
@@ -146,6 +172,12 @@ public class Menú extends javax.swing.JFrame {
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         dispose();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+                NuevaVentana3 = new ModificacionEmpleados();
+        Panel.add(NuevaVentana3);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,8 +222,12 @@ public class Menú extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+
+    private javax.swing.JMenuItem jMenuItem4;
+
     // End of variables declaration//GEN-END:variables
 }
