@@ -363,6 +363,7 @@ public class ChequesEmpleados extends javax.swing.JInternalFrame {
             txt_otros.setText("");
             txt_anticipos.setText("");
             txt_descuentos.setText("");
+            txt_total.setText("");
 
         }catch (Exception e){
             System.out.print(e.getMessage());
